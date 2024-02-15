@@ -100,17 +100,18 @@ button:focus-visible {
   box-shadow: 
     0 0 10px rgba(255, 255, 255, 0.8), /* Blanco */
     0 0 20px rgba(128, 128, 128, 0.5); /* Gris */
-  animation: douColor 1.5s infinite alternate; /* Animación de brillo */
+  animation: duoColor 1.5s infinite alternate; /* Animación de cambio de color */
 }
 
 @keyframes duoColor {
   from {
-    filter: brightness(100%);
+    filter: hue-rotate(0deg); /* Color original */
   }
   to {
-    filter: brightness(200%);
+    filter: hue-rotate(180deg); /* Cambiar a un color gris */
   }
 }
+
 
 @keyframes shine {
   from {
