@@ -67,10 +67,21 @@ button:focus-visible {
   }
 }
 /*Contenido de la página*/
-.img-display{
+.img-react{
   border-radius: 20px;
-  width: 24%;
+  width: 60%;
   height: auto;
   margin: 3%;
+}
+
+.img-css{
+  border-radius: 20px;
+  width: 35%;
+  height: auto;
+  margin: 3%;
+}
+
+.container{
+  display: flex;
 }
 

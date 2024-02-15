@@ -34,19 +34,29 @@ function App() {
       {/*  Creacion de la pagina web con minimo de contenido*/}
       <p>Parrafo creado en HTML a traves de  React</p>
       <h3>Seccion de imagenes (HTML y React)</h3>
-      <div>
-        <img className='img-display' src={imagen} alt="Mi Primera imagen" />
-        <img className='img-display' src={imagen2} alt="Segunda Imagen" />
-        <img className='img-display' src={imagen3} alt="Tercera Imagen" />
+      <div className='container'>
+        <div>
+          <img className='img-react' src={imagen} alt="Mi Primera imagen" />
+          <p>Imagen 1 (HTML y REACT).</p>
+        </div>
+        <div>
+          <img className='img-react' src={imagen2} alt="Segunda Imagen" />
+          <p>Imagen 2 (HTML y REACT).</p>
+        </div>
+        <div>
+          <img className='img-react' src={imagen3} alt="Tercera Imagen" />
+          <p>Imagen 3 (HTML y REACT)</p>
+        </div>
       </div>
       <h3>Seccion de imagenes (HTML y CSS)</h3>
-      <div>
-        <img className='img-display' src={imagenHTML1} alt="imagen html" />
-        <img className='img-display' src={imagenHTML2} alt="Imagen HTML y CSS" />
+      <div className='container'>
+        <div>
+          <img className='img-css' src={imagenHTML1} alt="imagen html" />
+        </div>
+        <div>
+          <img className='img-css' src={imagenHTML2} alt="Imagen HTML y CSS" />
+        </div>
       </div>
-      
-
-      
     </>
   )
 }
