@@ -66,3 +66,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/*Contenido de la página*/
+.img-display{
+  border-radius: 20px;
+  width: 30%;
+  height: auto;
+}

@@ -11,7 +11,7 @@ function App() {
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="logo" alt="Vite logo"/>
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
@@ -22,14 +22,13 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <img src={imagen} alt="Mi Primera imagen" />
+      <h1>Pagina de inicio</h1>
+      {/*  Creacion de la pagina web con minimo de contenido*/}
+      <p>Parrafo creado en HTML a traves de  React</p>
+      <img className='img-display' src={imagen} alt="Mi Primera imagen" />
+
+      
     </>
   )
 }
