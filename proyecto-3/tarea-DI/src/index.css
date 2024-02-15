@@ -69,6 +69,8 @@ button:focus-visible {
 /*Contenido de la página*/
 .img-display{
   border-radius: 20px;
-  width: 30%;
+  width: 24%;
   height: auto;
+  margin: 3%;
 }
+
