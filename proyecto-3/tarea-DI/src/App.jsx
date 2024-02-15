@@ -36,6 +36,7 @@ function App() {
       </div>
       <h1>Pagina de inicio</h1>
       
+      
       {/*  Creacion de la pagina web con minimo de contenido*/}
       <p>Parrafo creado en HTML a traves de  React</p>
       <h3>Seccion de imagenes (HTML y React)</h3>
