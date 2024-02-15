@@ -50,7 +50,7 @@ function App() {
       </div>
       {/*Boton para cambiar el contenido*/}
       <p>Creado por: {name}</p>
-      <h4>Para descibrir al creador da click en el boton "Descubrir"</h4>
+      <h4>Para mostrar al creador da click en el boton "Descubrir"</h4>
       <button type="button" onClick={() => setName("Marcelo Pinzón")}>Descubrir</button>
     </>
   )
