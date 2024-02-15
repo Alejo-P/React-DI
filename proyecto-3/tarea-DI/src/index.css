@@ -85,3 +85,38 @@ button:focus-visible {
   display: flex;
 }
 
+.img-react:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar por encima */
+  /* Mostrar una sombra con degradado alrededor de la imagen */
+  box-shadow: rgba(255, 0, 0, 0.7) 0px 0px 40px, /* Rojo */
+              rgba(0, 255, 0, 0.7) 0px 0px 40px, /* Verde */
+              rgba(0, 0, 255, 0.7) 0px 0px 40px; /* Azul */
+  animation: shine 1.5s infinite alternate; /* Animación de brillo */
+}
+
+.img-css:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar por encima */
+  /* Mostrar una sombra con degradado alrededor de la imagen */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8), /* Blanco */
+    0 0 20px rgba(128, 128, 128, 0.5); /* Gris */
+  animation: douColor 1.5s infinite alternate; /* Animación de brillo */
+}
+
+@keyframes duoColor {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(200%);
+  }
+}
+
+@keyframes shine {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
