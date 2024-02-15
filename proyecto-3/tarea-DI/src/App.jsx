@@ -52,9 +52,11 @@ function App() {
       <div className='container'>
         <div>
           <img className='img-css' src={imagenHTML1} alt="imagen html" />
+          <p>Imagen HTML 1</p>
         </div>
         <div>
           <img className='img-css' src={imagenHTML2} alt="Imagen HTML y CSS" />
+          <p>Imagen HTML 2 - Con estilo CSS</p>
         </div>
       </div>
     </>
