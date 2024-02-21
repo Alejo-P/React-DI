@@ -23,9 +23,12 @@ a:hover {
 }
 
 body {
+  color: white;
+  background: #373B44;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -53,6 +56,65 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/*Contenido de la pagina*/
+.imagen{
+  width: 50%;
+  height: auto;
+  margin: 0;
+}
+
+
+/* Listas de Tareas */
+.lista-tarea {
+  width: 555px;
+  min-height: 500px;
+  background-color: #fefeff;
+  color: black;
+  padding: 25px;
+  display: inline-block; /*Para que quede centrado en el contenedor*/
+  border-radius: 26px;
+  align-content: center;
+}
+/* Estilo del titulo */
+h1 {
+  color: #1b1b32;
+  font-size: 25px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.tarea-contenedor {
+  
+  min-height: 65px;  /*altura mínima para que aumente*/
+  background-color: #1b1b32;
+  margin: 0 0;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+  
+  justify-content: center;
+
+  align-items: center;
+  border-radius: 7px;
+  border: 1px solid white;
+  cursor: pointer;    
+}
+.tarea-texto {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  overflow-wrap: anywhere; /*para expandirse verticalmente*/
+}
+/* Icono */
+.tarea-icono {
+  color: white;
+  height: 25px;
+  margin: 10px;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

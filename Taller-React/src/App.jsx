@@ -1,33 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import LogoEPN from './Imagenes/EPN_logo_big.png'
+import Tareas from './Componentes/Tareas'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className='contenedor-logo'>
+      <img src={LogoEPN} alt="Logo EPN" className='imagen'/>
+      <p>Logo de la EPN</p>
+    </div>
+    <div className='lista-tarea'>
+        <h1>Lista de tareas</h1>
+        <p>Lista de tareas asignadas</p>
+        <Tareas texto="Realizar las tareas pendientes"/>
+        <Tareas texto="Aprender nuevos temas"/>
+    </div>
+      <div></div>
     </>
   )
 }
