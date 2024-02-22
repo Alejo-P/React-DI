@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+
+    
+</head>
+<body>
+
+
+
+
+
+    <form onsubmit="ingreso(); calculos(); calculoss(); return false;">
+        
+        <label>Valor Ingresado</label>
+        <input type="text" id="val1" name="val">
+
+        <label>Ver resultado</label>
+        <span id="lb1"></span>
+
+        <input type="text" id="resultado">
+
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+
+    <script>
+        function mostrarAlerta() {
+  alert("¡Bienvenido al aula virtual!");
+}
+
+                function ingreso() {
+            var valor_recibe = document.getElementById('val1').value;
+            window.alert(valor_recibe);
+        }
+    
+        function calculos() {
+            var suma = parseFloat(document.getElementById('val1').value);
+            document.getElementById('lb1').innerText = suma * 2;
+        }
+
+        function calculoss() {
+            var suma = parseFloat(document.getElementById('val1').value);
+            document.getElementById('resultado').value = suma + 1;
+        }
+    </script>
+</body>
+</html>

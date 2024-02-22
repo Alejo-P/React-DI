@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Firebase</title>
+    <!-- Agrega la configuración de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+    <script>
+        // Tu configuración de Firebase aquí
+        const firebaseConfig = {
+            apiKey: "AIzaSyAKotyG-O0HoPa5hM6njmchL8j9hjRI9S4",
+            authDomain: "html-poli.firebaseapp.com",
+            databaseURL: "https://html-poli-default-rtdb.firebaseio.com",
+            projectId: "html-poli",
+            storageBucket: "html-poli.appspot.com",
+            messagingSenderId: "91923451839",
+            appId: "1:91923451839:web:137b4637c51a9175cc1b0a"
+        };
+
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        function enviarDatos() {
+            var nombre = document.getElementById('nombre').value;
+            var comentario = document.getElementById('comentario').value;
+
+            // Enviar datos a Firebase Realtime Database
+            var referencia = firebase.database().ref('comentarios');
+            referencia.push({
+                nombre: nombre,
+                comentario: comentario
+            })
+            .then(function() {
+                console.log('Datos guardados con éxito en Firebase.');
+                alert('Datos guardados con éxito en Firebase.');
+            })
+            .catch(function(error) {
+                console.error('Error al guardar datos en Firebase:', error);
+                alert('Error al guardar datos en Firebase.');
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>Formulario con Firebase</h2>
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required> <br>
+
+        <label for="comentario">Comentarios:</label>
+        <input type="text" id="comentario" name="comentario" required>
+
+        <button type="button" onclick="enviarDatos()">Guardar</button>
+    </form>
+</body>
+</html>
