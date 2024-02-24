@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+<body>
+  <h2>Formulario</h2>
+  <form id="miFormulario" action="http://localhost:3000/guardar-datos" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    
+    <input type="submit" value="Guardar">
+  </form>
+</body>
+
+
+<script>
+  
+const express = require('express');
+const mysql = require('mysql');
+const bodyParser = require('body-parser');
+
+const app = express();
+const port = 3000;
+
+// Configuración de la conexión a la base de datos
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'basededatos'
+});
+
+connection.connect(err => {
+  if (err) {
+    console.error('Error de conexión a la base de datos:', err);
+    return;
+  }
+  console.log('Conexión establecida con la base de datos');
+});
+
+// Middleware para analizar los datos del formulario
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Ruta para guardar los datos del formulario
+app.post('/guardar-datos', (req, res) => {
+  const { nombre, email } = req.body;
+
+  // Insertar datos en la base de datos
+  const sql = 'INSERT INTO tabla (nombre, email) VALUES (?, ?)';
+  connection.query(sql, [nombre, email], (err, result) => {
+    if (err) {
+      console.error('Error al guardar los datos en la base de datos:', err);
+      res.status(500).send('Error al guardar los datos en la base de datos');
+      return;
+    }
+    console.log('Datos guardados correctamente en la base de datos');
+    res.send('Datos guardados correctamente en la base de datos');
+  });
+});
+
+// Iniciar el servidor
+app.listen(port, () => {
+  console.log(`Servidor escuchando en http://localhost:${port}`);
+});
+
+
+
+</script>
+
+</html>
