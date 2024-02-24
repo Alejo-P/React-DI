@@ -12,7 +12,7 @@ import ImgCheques from '../Imagenes/ImgMetodos/checke.jpg'
 
 const MetodosPago = () => {
   return (
-    <section id="metodos" class="metodos">
+    <section id="metodos" className="metodos">
         <div className="contenido-seccion">
             <h2>MÉTODOS DE  PAGO</h2>
             <h4>Tarjetas de crédito y débito</h4>

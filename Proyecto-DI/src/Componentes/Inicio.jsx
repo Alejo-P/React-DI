@@ -7,7 +7,7 @@ const Inicio = ({video}) => {
         <div className="contenido-inicio">
             <h1><em>Empresa dedicada al mantenimiento, cuidado y reparación de tu vehículo.</em></h1>
             <div className="contenedor-video">
-                <video width="640 " height="360" autoPlay>
+                <video width="640 " height="360" controls>
                     <source src={video} type="video/mp4"/>
                 </video>
             </div>
