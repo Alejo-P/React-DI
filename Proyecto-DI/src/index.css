@@ -1,5 +1,11 @@
 /*--------------------Contenido de la pagina----------------------*/
 /* FONDO DE LA PAGINA */
+*{ /*Selecciona todos los elementos en la pagina y las aplica las siguientes reglas*/
+  box-sizing: border-box; /*Es una regla */
+  font-family: 'Work Sans';
+  margin: 0; /*Elimina cualquier margen predeterminado que los navegadores puoedan aplicar*/
+  padding: 0;/*Elimina cualquier relleno predeterminado que los navegadores puedan aplicar*/
+}
 :root{
   background-image: url(./Imagenes/Fondo.jpg);
   background-repeat: no-repeat;
@@ -11,8 +17,8 @@
 /*-----------------------------------------------------------------------------------------------------------*/
 /* ENCABEZADO ---------------------------------------------------------------------------------------------*/
 .contenedor-header .Botones a{
-  margin-left: 3px; /*para la separaciones entre botones inicio y registro*/
-}
+  margin-left: 20px; /*para la separaciones entre botones inicio y registro*/
+} 
 /* Botones iniciar sesion y registro */
 .Botones a{
   position: relative;
@@ -31,7 +37,6 @@
   letter-spacing: 0.3em;
   box-shadow: 0 0 90px var(--clr);
 }
-
 .Botones a:before{
   content: ""; /*le quita el fondo rojo inicial a los botones, para que quede solo el borde*/
   position: absolute;
@@ -47,12 +52,11 @@ html{
 }
 .contenedor-header{
   background-color: black; /*Fondo del encabezado*/
-  /* padding: 3px; */
+  padding: 3px;
   justify-content: space-between;
   align-items: center;
-  top:0%;
   position: fixed; /*mantiene estatica el encabezado en todas las secciones*/
-  width: 100%;/*Define el tamaño del encabezado a lo largo*/
+  width: 100%; /*Define el tamaño del encabezado a lo largo*/
 }
 .contenedor-header header{
  display: flex; /*Coloca el nav y los botones en la parte de arriba junto al logo*/
@@ -60,24 +64,26 @@ html{
 }
 /* logo */
 img{
-  width: 14rem;
+  width: 14rem;  
 }
 /*Para poner los menus en horizontal*/
 .contenedor-header header ul{
   list-style-type: none;
   display: flex; /*Coloca los menus en forma horizontal*/
-  margin-right: 220px; /*Empuja a los botones hacia el lado derecho*/
+  margin-right: 250px; /*Empuja a los botones hacia el lado  derecho*/
 }
 /*texto del menu*/
 .contenedor-header header nav ul li a{
   text-align: none;
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   transition: .5s;
   text-decoration: none;
   font-weight: bold;
-  font-family: monospace;
-  font-size: 19px;
+ font-family: monospace;
+ font-size: 19px;
+
+ 
 }
 .contenedor-header header nav ul li a:hover{
   color: grey;
@@ -107,38 +113,29 @@ img{
   justify-content: center;
   height: 105vh; /* Ajusta la altura según tus necesidades */
   color: white;
-
 }
-
 .contenido-inicio {
   text-align: center; /*Centra los iconos de las redes sociales*/
   max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
   margin-top: 80px; /*Separacion del video y texto del encabezadp*/
- 
-  
 }
 .contenido-inicio h1{
   font-size: 20px;
 }
-
 .contenedor-video {
   margin-top: 40px; /* Espaciado opcional entre el texto y el video */
-  
 }
 .siguenos{
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 20px;
-  text-align: center;
 }
 .redes {
   margin-top: 20px; /* Espaciado opcional entre el video y las redes sociales */
   display: flex; /*Coloca los iconos en horizontal*/
-  justify-content: space-around; /*Distribucion de los iconos*/
   justify-content: center; /*Centra los iconos en la pantalla*/
   margin-bottom: 30px; /*separa los iconos de la parte del backgroun de trabajo*/
 }
-
 .redes a {
   margin-right: 30px; /* Espaciado entre iconos de redes sociales */
   color: rgb(5, 5, 5); /*Color de los iconos de redes sociales*/
@@ -149,10 +146,12 @@ img{
   line-height: 60px;/*Centro los iconos dentro del background*/
   border-radius:50% ;
   display: block;
+  position: relative;
   transition: .5s;
      
 }
 .redes a:before{
+  position: absolute;
   content: "";
   top: 0;
   left: 0;
@@ -162,115 +161,95 @@ img{
   z-index: -1;
   transform: scale(0.9);
   transition: .5s;
-  
 }
 /*Sirve para colocarle los fondos con colores unicos a cada uno de los icones*/
 .redes a:nth-child(1):before{
   background: blue;
-
 }
 .redes a:nth-child(2):before{
  background: #900a6e
-
 }
 .redes a:nth-child(3):before{
   background: #f1f2f3
-
 }
 .redes a:nth-child(4):before{
   background: #d80d0d
-
 }
 .redes a:nth-child(5):before{
   background: #218d15
-
 }
 /*-----------------------------------------*/
 .redes a:hover:before{
   filter:blur(3px);
   transform: scale(1.2);
-
 }
 /*Sirve para colocar los box shadow a cada uno de los iconos*/
 .redes a:nth-child(1):before{
-  box-shadow: 0 0 15px #1125c3
-
+  box-shadow: 0 0 15px #001eff
 }
 .redes a:nth-child(2):before{
   box-shadow: 0 0 15px #c311b4
-
 }.redes a:nth-child(3):before{
   box-shadow: 0 0 15px #fffdfd
-
 }.redes a:nth-child(4):before{
-  box-shadow: 0 0 15px #d30a0a
-
+  box-shadow: 0 0 15px #e80000
 }.redes a:nth-child(5):before{
   box-shadow: 0 0 15px #299d17
-
 }
 /*----------------------------------------------------------*/
-
 /*Sirve para que solo facebook este de los colores que coloque*/
 .redes a:nth-child(1):hover{
   color: blue;
-  box-shadow: 0 0 15px #1125c3;
+  box-shadow: 0 0 55px #1125c3;
   text-shadow: 0 0 15px #1125c3;
   background-color: white;
-
 }
 .redes a:nth-child(2):hover{
-  color: rgb(97, 4, 83);
-  box-shadow: 0 0 15px #7d056d;
-  text-shadow: 0 0 15px #9c0d82;
+  color: rgb(252, 24, 218);
+  box-shadow: 0 0 55px #e303c5;
+  text-shadow: 0 0 15px #f20fc8;
   background-color: white;
-
 }
 .redes a:nth-child(3):hover{
   color: rgb(0, 0, 0);
-  box-shadow: 0 0 15px #000000;
-  text-shadow: 0 0 15px #070707;
+  box-shadow: 0 0 55px #ffffff;
+  text-shadow: 0 0 15px #fffdfd;
   background-color: white;
-
 }
 .redes a:nth-child(4):hover{
   color: rgb(218, 28, 22);
-  box-shadow: 0 0 15px #990909;
+  box-shadow: 0 0 55px #990909;
   text-shadow: 0 0 15px #d90f0f;
   background-color: white;
-
 }
 .redes a:nth-child(5):hover{
   color: rgb(34, 190, 26);
-  box-shadow: 0 0 15px #11c311;
+  box-shadow: 0 0 55px #11c311;
   text-shadow: 0 0 15px #11c32f;
-  background-color: white;
-
+  background-color: rgb(255, 255, 255);
 }
 /*-----------------------------------------------------------*/
 /* Estilo para la barra de navegación "nav2" */
 .nav2 {
+ position: absolute;
   right: 0;
   bottom: 0;
   margin: 20px; /* Ajusta este valor según tus preferencias para dejar espacio desde el borde de la pantalla */
   z-index: 999; /* Ajusta este valor si es necesario para que esté por encima de otros elementos */
 }
-
 /* Ajusta el estilo del ul y li según tus preferencias */
 .nav2 ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  background-color: #ffffff; 
 }
-
-.nav2 li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
 .nav2 a {
-  text-decoration: none;
-  color: #ffffff; /* Ajusta el color según tus preferencias */
+  /* text-decoration: none; */
+  color: #000000; /* Ajusta el color según tus preferencias */
+  font-size: 30px;
+  font-family:fantasy;
+  padding: 17px;
+  margin-bottom: 20px;
+  text-decoration: overline;
 }
 
 
@@ -278,21 +257,15 @@ img{
 /* SECCION ACERCA DE NOSOTROS----------------------------------------------------------------------------------------------------------------*/
 .acerca{
   background: linear-gradient(to top, rgba(7, 7, 7, 0.8),rgba(0, 0, 0, 0.8)),
-  url(../Imagenes/ImgAcerca/Fondo1.jpeg);
+  url(./Imagenes/ImgAcerca/Fondo1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  /*Rellenar horizontalmente la ventana*/
-  margin-left: -0.6%;
-  margin-right:-0.6%;
+  height: 110vh;
   display: flex;
   align-items: center;
+  /* width: 100%; */ /*Si esto no se elimina toda la pagina web se mueve*/
   color: white;
   padding: 50px 20px; /*Separa los texto de los margenes de las pantallas*/
-}
-.acerca .contenido-seccion{
-  display: block;
-  max-width: 100%;
 }
 .acerca h2{
   font-size: 48px;
@@ -307,32 +280,25 @@ img{
 .acerca .multimarca .marcas{
   /* position: relative; */
   max-width: 150px; /* hace que mientras aumento el numero las imagenes se van acomodando en filas*/
-  height: fit-content;
   margin: 10px;
   cursor: pointer;
-
 }
 .acerca .multimarca .marcas img{
   width: 60%; /*Tamaño de las imagenes*/
-  /* display: block; */
 }
 .acerca .Productos{
   display: flex; /*Modo horizontal*/
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .acerca .Productos .producto{
   /* position: relative; */
   max-width: 150px; /* hace que mientras aumento el numero las imagenes se van acomodando en filas*/
-  height: fit-content;
   margin: 10px;
   cursor: pointer;
-
 }
 .acerca .Productos .producto img{
-  width: 60%; /*Tamaño de las imagenes*/
-  display: block;
+  width: 70%; /*Tamaño de las imagenes*/
 }
 .contenido-seccion p{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -350,15 +316,12 @@ img{
 /* SECCION SERVICIO ----------------------------------------------------------------------------------------------------------------*/
 .servicios{
   background: linear-gradient(to top, rgba(59, 61, 62, 0.8),rgb(41, 51, 56, 0.8)),
-  url(../Imagenes/ImgServ/Fondo.jpg);
-  height: 100vh;
+  url(./Imagenes/ImgServ/Fondo.jpg);
+  height: 110vh;
   display: flex;
   align-items: center;
   color: white;
   padding: 50px 20px; /*Separa los texto de los margenes de las pantallas*/
-}
-.servicios .contenido-seccion{
-  max-width: 100%;
 }
 .servicios h2{
   font-size: 48px;
@@ -371,15 +334,12 @@ img{
   justify-content: center;
 }
 .servicios .galeria .proyecto{
-  position: relative;
-  max-width: 340px;
   height: fit-content;
   margin: 10px;
   cursor: pointer;
-
 }
 .servicios .galeria .proyecto img{
-  width: 100%;
+ width: 20rem;
   display: block;
 }
 
@@ -388,14 +348,15 @@ img{
 /* SECCION CONTACTOS -------------------------------------------------------------------------------------------*/
 .contacto{
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),
-  url(../Imagenes/FondoContacto.jpg);
+  url(./Imagenes/FondoContacto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 120vh; /*tamaño de la seccion*/
+  height: 130vh; /*tamaño de la seccion*/
   display: flex;
   align-items: center;
   color: white;
   padding: 50px 20px; /*Separa los texto de los margenes de las pantallas*/
+  box-sizing: border-box;
 }
 .contacto .contenido-seccion{
   max-width: 1100px;
@@ -409,13 +370,11 @@ img{
 }
 .contacto .fila{
   display: flex;
-  
-
 }
 .contacto .col{
   width: 50%;
   padding: 10px;
-  position: relative;
+  
 }
 .contacto .col input, .contacto .col textarea{
   display: block;
@@ -437,7 +396,6 @@ img{
   padding: 10px 22px;
   font-size: 16px;
   color: #fff;
-  position: relative;
   z-index: 10;
 }
 .contacto .col iframe{
@@ -448,7 +406,6 @@ img{
   width: 100%;
   margin-left: 20%;
 }
-
 .contacto .col .info ul{
   list-style: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -461,3 +418,168 @@ img{
   display: inline-block;
   margin-right: 20px;
 } 
+ 
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* INICIAR SESION------------------------------------------------------------------------------------------------------------------------- */
+.Inicio{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),
+  url(./Imagenes/FondoInicio/Imagen1.jpg);
+  
+  
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  
+  /* padding: 50px 20px; Separa los texto de los margenes de las pantallas */
+}
+.logo-forms{
+ margin-left: 20px;
+ margin: 20px;
+  border-radius: 10px; /* Ajusta el valor según la cantidad de redondeo deseada */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se extienda más allá del borde redondeado */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9); /* Ajusta el valor de acuerdo a la intensidad deseada */ 
+}
+.formulario-ingreso{
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(209, 37, 37, 0.9), 0 6px 20px 0 rgba(189, 44, 44, 0.9);
+  padding: 20px;
+  width: max-content;/*Ajusta el ancho del contenedor al contenido*/
+  text-align: center;
+}
+.formulario-ingreso label{
+  font-family:Arial, Helvetica, sans-serif;
+  margin-top: 8px;
+}
+.formulario-ingreso input{
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #585757;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+}
+.formulario-ingreso input::placeholder{
+  color: #d1c9c9;
+}
+.formulario-ingreso input:hover{
+  box-shadow: 0 0 9px rgba(208, 207, 207, 0.9), inset 0 0 10px rgba(255, 255, 255, .4);
+}
+.formulario-ingreso #caja-elementos{
+  text-align: end;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formulario-ingreso #caja-elementos a{
+  text-decoration: none;
+  color: rgb(193, 188, 188);
+}
+.formulario-ingreso button[type="submit"]{
+  width: 50%;
+  padding: 3%;
+  margin-top: 8px;
+  border-radius: 999px;
+  background-color: #e01d1d;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: box-shadow 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+}
+.formulario-ingreso button[type="submit"]:hover {
+  box-shadow: 0 0 9px rgba(240, 86, 35, 0.9), inset 0 0 10px rgba(255, 255, 255, .4);
+}
+.botones{
+  display: flex;
+}
+.botones button{
+  margin: 10px;
+}
+.formulario-ingreso button[class="cancelar"]{
+  width: 50%;
+  padding: 3%;
+  margin-top: 8px;
+  border-radius: 999px;
+  background-color: #dc6d23;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: box-shadow 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+}
+.formulario-ingreso button[class="cancelar"]:hover {
+  box-shadow: 0 0 9px rgba(244, 171, 25, 0.9), inset 0 0 10px rgba(255, 255, 255, .4);
+}
+
+.Registro{
+  background: linear-gradient(to top, rgba(12, 9, 9, 0.8),rgba(1, 1, 1, 0.8)),
+  url(./Imagenes/FondoInicio/Imagen1.jpg);
+ 
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  /* padding: 50px 20px; Separa los texto de los margenes de las pantallas */
+}
+
+@media screen  and (max-width:991px){
+  .formulario-ingreso{
+      max-width: 100%;
+      margin: auto;
+  }
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/* SECCION METODOS DE PAGO ---------------------------------------------------------------------------------------------------------*/
+.metodos{
+  background: linear-gradient(to top, rgba(15, 14, 14, 0.5),rgba(34, 32, 32, 0.6)),
+  url(./Imagenes/ImgMetodos/Fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* width: 100%; */
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 50px 50px; /*Separa los texto de los margenes de las pantallas*/
+}
+.metodos .contenido-seccion{
+  max-width: 100%;
+}
+.metodos h2{
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin-top: 80px;
+}
+.metodos .galeria{
+  display: flex; /*Modo horizontal*/
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.metodos .galeria .proyecto{
+  margin: 25px; /*Separacion entre imagenes*/
+  cursor: pointer;
+
+}
+.contenido-seccion h4{
+  text-align: center;
+  font-family: cursive;
+  font-size: 20px;
+  color: white;
+  margin: auto; /*Separacion entre el texto y las imagenes*/
+}
+.contenido-seccion .galeria img{
+  width: 13rem; /*Tamaño de las imagenes de metodos*/
+}

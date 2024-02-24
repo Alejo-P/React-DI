@@ -24,7 +24,6 @@ const Inicio = ({video}) => {
             <nav className="nav2">
                 <ul>
                     <li><a href="#metodos">Métodos de Pago</a></li>
-                    <li><a href="#preguntas">Preguntas Frecuentes</a></li>
                 </ul>
             </nav>   
         </div>

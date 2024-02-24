@@ -14,7 +14,10 @@ import Icono11 from '../Imagenes/ImgAcerca/icon11.jpg'
 import Icono12 from '../Imagenes/ImgAcerca/icon12.jpg'
 
 //Productos
-import Productos from '../Imagenes/ImgAcerca/pro1.jpg'
+import Producto1 from '../Imagenes/ImgAcerca/pro1.jpg'
+import Producto2 from '../Imagenes/ImgAcerca/pro2.jpg'
+import Producto3 from '../Imagenes/ImgAcerca/pro3.jpg'
+import Producto4 from '../Imagenes/ImgAcerca/pro4.jpg'
 const AcercaNosotros = () => {
   return (
     <section id="acerca" className="acerca">
@@ -43,7 +46,10 @@ const AcercaNosotros = () => {
             </div>
             <h3>Trabajamos con los mejores productos</h3>
             <div className="Productos">
-                <Imagen imagen={Productos} clase={"producto"}/>
+                <Imagen imagen={Producto1} clase={"producto"}/>
+                <Imagen imagen={Producto2} clase={"producto"}/>
+                <Imagen imagen={Producto3} clase={"producto"}/>
+                <Imagen imagen={Producto4} clase={"producto"}/>
             </div>
         </div>
     </section>

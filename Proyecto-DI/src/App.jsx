@@ -1,8 +1,11 @@
 import AcercaNosotros from './Componentes/AcercaNosotros'
+import Contacto from './Componentes/Contacto'
 import Encabezado from './Componentes/Encabezado'
 import Inicio from './Componentes/Inicio'
+import MetodosPago from './Componentes/MetodosPago'
+import Servicios from './Componentes/Servicios'
 import Logo from './Imagenes/Logo.jpg'
-import Video from './Videos/Video1.mp4'
+import Video from './Videos/VideoOficial.mp4'
 
 function App() {
 
@@ -11,6 +14,9 @@ function App() {
       <Encabezado src={Logo}/>
       <Inicio video={Video}/>
       <AcercaNosotros/>
+      <Servicios/>
+      <Contacto/>
+      <MetodosPago/>
     </>
   )
 }
