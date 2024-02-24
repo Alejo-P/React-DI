@@ -1,3 +1,4 @@
+import AcercaNosotros from './Componentes/AcercaNosotros'
 import Encabezado from './Componentes/Encabezado'
 import Inicio from './Componentes/Inicio'
 import Logo from './Imagenes/Logo.jpg'
@@ -9,6 +10,7 @@ function App() {
     <>
       <Encabezado src={Logo}/>
       <Inicio video={Video}/>
+      <AcercaNosotros/>
     </>
   )
 }
