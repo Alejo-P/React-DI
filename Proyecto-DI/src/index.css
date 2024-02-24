@@ -1,0 +1,275 @@
+/*--------------------Contenido de la pagina----------------------*/
+/* FONDO DE LA PAGINA */
+:root{
+  background-image: url(./Imagenes/Fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.contenedor-header .Botones a{
+  margin-left: 10px; /*para la separaciones entre botones inicio y registro*/
+}
+/* Botones iniciar sesion y registro */
+.Botones a{
+  position: relative;
+  background-color: rgb(204, 14, 14); /*Borde de los botones*/
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.2em; /*Separacion entre las letras dentro del boton*/
+  padding: 10px 20px; /*Borde alrededor de los botones*/
+  transition: 0.5s;
+}
+.Botones a:hover{
+  background: var(--clr);
+  color:var(--clr);
+  letter-spacing: 0.3em;
+  box-shadow: 0 0 90px var(--clr);
+}
+
+.Botones a:before{
+  content: ""; /*le quita el fondo rojo inicial a los botones, para que quede solo el borde*/
+  position: absolute;
+  inset: 3px; /*Borde rojo de inicio de sesion*/
+  background: black;
+}
+.Botones a span{
+  position:relative;
+  z-index: 1;
+}
+html{
+  scroll-behavior: smooth; /*Me permite deslizar cuando hago click en los modulos*/
+}
+.contenedor-header{
+  background-color: black; /*Fondo del encabezado*/
+  padding: 3px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /*mantiene estatica el encabezado en todas las secciones*/
+  width: 100%;/*Define el tamaño del encabezado a lo largo*/
+}
+.contenedor-header header{
+ display: flex; /*Coloca el nav y los botones en la parte de arriba junto al logo*/
+ align-items: center;
+}
+/* logo */
+img{
+  width: 14rem;
+
+}
+/*Para poner los menus en horizontal*/
+.contenedor-header header ul{
+  display: flex; /*Coloca los menus en forma horizontal*/
+  margin-right: 220px; /*Empuja a los botones hacia el lado  derecho*/
+}
+/*texto del menu*/
+.contenedor-header header nav ul li a{
+  text-align: none;
+  color: white;
+  margin: 0 15px;
+  transition: .5s;
+  text-decoration: none;
+  font-weight: bold;
+ font-family: monospace;
+ font-size: 19px;
+}
+.contenedor-header header nav ul li a:hover{
+  color: grey;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+/* SECCION INICIO---------------------------------------------------------------------------------------*/
+/*video*/
+#inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 105vh; /* Ajusta la altura según tus necesidades */
+  color: white;
+
+}
+
+.contenido-inicio {
+  text-align: center; /*Centra los iconos de las redes sociales*/
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin-top: 80px; /*Separacion del video y texto del encabezadp*/
+ 
+  
+}
+.contenido-inicio h1{
+  font-size: 20px;
+}
+
+.contenedor-video {
+  margin-top: 40px; /* Espaciado opcional entre el texto y el video */
+  
+}
+.siguenos{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  
+}
+.redes {
+  margin-top: 20px; /* Espaciado opcional entre el video y las redes sociales */
+  display: flex; /*Coloca los iconos en horizontal*/
+  justify-content: center; /*Centra los iconos en la pantalla*/
+  margin-bottom: 30px; /*separa los iconos de la parte del backgroun de trabajo*/
+ 
+  
+  
+  
+}
+
+.redes a {
+  margin-right: 30px; /* Espaciado entre iconos de redes sociales */
+  color: rgb(5, 5, 5); /*Color de los iconos de redes sociales*/
+  font-size: 30px; /*Tamaño de los iconos de las redes sociales*/
+  height: 60px;
+  width: 60px;
+  background: rgb(248, 245, 245);
+  line-height: 60px;/*Centro los iconos dentro del background*/
+  border-radius:50% ;
+  display: block;
+  position: relative;
+  transition: .5s;
+     
+}
+.redes a:before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0.9);
+  transition: .5s;
+  
+}
+/*Sirve para colocarle los fondos con colores unicos a cada uno de los icones*/
+.redes a:nth-child(1):before{
+  background: blue;
+
+}
+.redes a:nth-child(2):before{
+ background: #900a6e
+
+}
+.redes a:nth-child(3):before{
+  background: #f1f2f3
+
+}
+.redes a:nth-child(4):before{
+  background: #d80d0d
+
+}
+.redes a:nth-child(5):before{
+  background: #218d15
+
+}
+/*-----------------------------------------*/
+.redes a:hover:before{
+  filter:blur(3px);
+  transform: scale(1.2);
+
+}
+/*Sirve para colocar los box shadow a cada uno de los iconos*/
+.redes a:nth-child(1):before{
+  box-shadow: 0 0 15px #1125c3
+
+}
+.redes a:nth-child(2):before{
+  box-shadow: 0 0 15px #c311b4
+
+}.redes a:nth-child(3):before{
+  box-shadow: 0 0 15px #fffdfd
+
+}.redes a:nth-child(4):before{
+  box-shadow: 0 0 15px #d30a0a
+
+}.redes a:nth-child(5):before{
+  box-shadow: 0 0 15px #299d17
+
+}
+/*----------------------------------------------------------*/
+
+/*Sirve para que solo facebook este de los colores que coloque*/
+.redes a:nth-child(1):hover{
+  color: blue;
+  box-shadow: 0 0 15px #1125c3;
+  text-shadow: 0 0 15px #1125c3;
+  background-color: white;
+
+}
+.redes a:nth-child(2):hover{
+  color: rgb(97, 4, 83);
+  box-shadow: 0 0 15px #7d056d;
+  text-shadow: 0 0 15px #9c0d82;
+  background-color: white;
+
+}
+.redes a:nth-child(3):hover{
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 15px #000000;
+  text-shadow: 0 0 15px #070707;
+  background-color: white;
+
+}
+.redes a:nth-child(4):hover{
+  color: rgb(218, 28, 22);
+  box-shadow: 0 0 15px #990909;
+  text-shadow: 0 0 15px #d90f0f;
+  background-color: white;
+
+}
+.redes a:nth-child(5):hover{
+  color: rgb(34, 190, 26);
+  box-shadow: 0 0 15px #11c311;
+  text-shadow: 0 0 15px #11c32f;
+  background-color: white;
+
+}
+/*-----------------------------------------------------------*/
+/* Estilo para la barra de navegación "nav2" */
+.nav2 {
+ position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 20px; /* Ajusta este valor según tus preferencias para dejar espacio desde el borde de la pantalla */
+  z-index: 999; /* Ajusta este valor si es necesario para que esté por encima de otros elementos */
+}
+
+/* Ajusta el estilo del ul y li según tus preferencias */
+.nav2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav2 li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav2 a {
+  text-decoration: none;
+  color: #ffffff; /* Ajusta el color según tus preferencias */
+}

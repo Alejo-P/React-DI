@@ -54,6 +54,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/*Contenido para la pagina*/
+.imagen{
+  width: 10%;
+  height: auto;
+}
+
+.contenedor{
+  display: inline-block;
+  align-items: center;
+  border-radius: 999px;
+  border: 2px solid white;
+}
+
+.texto {
+  padding: 10px; /* Espaciado interno para separar el texto del borde */
+  margin-left: 10px; /* Espacio entre la imagen y el texto */
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
